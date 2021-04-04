@@ -9,7 +9,7 @@
 //!
 //! ```
 //! use reusable_fmt:*;
-//! 
+//!
 //! // This defines your format strings
 //! fmt_reuse! {
 //!     TEST1 = "This is a test! {}";
@@ -19,7 +19,7 @@
 //!     TEST5 = "Positional args {1} {0}";
 //!     TEST6 = "Mixed {} {2} {1} {arg}";
 //! }
-//! 
+//!
 //! fn main() {
 //! 	prntln!(TEST, "Hello World"); // This is a test! Hello World
 //! 	let test = fmt!(TEST6, "Hello", "Test", "World", arg="Named"); // Mixed Hello World Test Named
@@ -37,9 +37,8 @@
 //! The general syntax is:
 //!
 //! `fmt!(<KEY>, <ARGUMENTS>)`
-//! 
+//!
 //! `wrt!(<BUFFER>, <KEY>, <ARGUMENTS>)`
-
 
 #![cfg_attr(nightly, feature(extended_key_value_attributes))]
 /// Creates a reusable format identifier
@@ -91,12 +90,25 @@ macro_rules! mac_workaround {
 
 #[cfg(nightly)]
 macro_rules! fmt_usage {
-    ($name:expr) => { concat!("\t", concat!(stringify!($name), "!(TEST, \"World\"); // Hello World")) }
+    ($name:expr) => {
+        concat!(
+            "\t",
+            concat!(stringify!($name), "!(TEST, \"World\"); // Hello World")
+        )
+    };
 }
 
 #[cfg(nightly)]
 macro_rules! write_usage {
-    ($name:expr) => { concat!("\tlet mut s = String::new();\n\t", concat!(stringify!($name), "!(&mut s, TEST, \"World\"); // Hello World")) }
+    ($name:expr) => {
+        concat!(
+            "\tlet mut s = String::new();\n\t",
+            concat!(
+                stringify!($name),
+                "!(&mut s, TEST, \"World\"); // Hello World"
+            )
+        )
+    };
 }
 
 /// Automatically generates wrapper macros for [`std::fmt`] macros
