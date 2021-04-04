@@ -1,0 +1,16 @@
+[package]
+name = "reusable-fmt"
+version = "0.1.0"
+authors = ["rupansh <rupanshsekar@hotmail.com>"]
+edition = "2018"
+description = "Reusable format strings for format! and friends"
+readme = "README.md"
+repository = "https://github.com/rupansh/reusable-fmt"
+license = "WTFPL"
+keywords = ["format", "string", "fmt", "macros", "macro"]
+categories = ["development-tools", "parsing", ]
+
+[dependencies]
+
+[build-dependencies]
+rustc_version = "0.3"
