@@ -1,6 +1,8 @@
 # reusable-fmt 
 
 [![RUST](https://img.shields.io/badge/made%20with-RUST-red.svg?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
+[![crates.io](https://img.shields.io/crates/v/reusable-fmt.svg?color=green&style=for-the-badge&logo=hack-the-box&logoColor=yellow)](https://crates.io/crates/reusable-fmt)
+[![docs.rs](https://img.shields.io/docsrs/reusable-fmt/latest?style=for-the-badge&logo=read-the-docs&logoColor=white)](https://docs.rs/reusable-fmt/latest/reusable_fmt)
 
 *Reusable format strings for [std::fmt](https://doc.rust-lang.org/std/fmt/) macros*
 
