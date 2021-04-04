@@ -1,7 +1,6 @@
 // Copyright (c) 2021 - devs of `reusable-fmt`
 // SPDX-License-Identifier: WTFPL
 
-#![cfg_attr(nightly, feature(extended_key_value_attributes))]
 //! This crate provides compile-time defined format strings support for
 //! [`std::fmt`] macros.
 //!
