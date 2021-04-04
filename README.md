@@ -25,7 +25,7 @@ use reusable_fmt::*;
 
 ## Example Usage
 ```rust
-use reusable_fmt:*;
+use reusable_fmt::*;
 
 // This defines your format strings
 fmt_reuse! {
@@ -38,7 +38,7 @@ fmt_reuse! {
 }
 
 fn main() {
-	prntln!(TEST, "Hello World"); // This is a test! Hello World
+	prntln!(TEST1, "Hello World"); // This is a test! Hello World
 	let test = fmt!(TEST6, "Hello", "Test", "World", arg="Named"); // Mixed Hello World Test Named
 	prntln!("{}", "WOW This works too!");
 }

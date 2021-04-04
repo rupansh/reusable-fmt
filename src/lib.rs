@@ -7,7 +7,7 @@
 //! # Example
 //!
 //! ```
-//! use reusable_fmt:*;
+//! use reusable_fmt::*;
 //!
 //! // This defines your format strings
 //! fmt_reuse! {
@@ -20,7 +20,7 @@
 //! }
 //!
 //! fn main() {
-//! 	prntln!(TEST, "Hello World"); // This is a test! Hello World
+//! 	prntln!(TEST1, "Hello World"); // This is a test! Hello World
 //! 	let test = fmt!(TEST6, "Hello", "Test", "World", arg="Named"); // Mixed Hello World Test Named
 //! 	prntln!("{}", "WOW This works too!");
 //! }
@@ -69,6 +69,7 @@ macro_rules! fmt_reuse {
     ($($key:ident = $value:literal;)*) => {
         $(
             #[doc(hidden)]
+            #[macro_use]
             #[macro_export]
             macro_rules! $key {
                 () => {
