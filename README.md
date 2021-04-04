@@ -11,18 +11,18 @@ This crate provides compile-time defined format string support for `std::fmt` ma
 ## Installation
 
 `Cargo.toml`:
-```
+```toml
 [dependencies]
 reusable-fmt = { git = https://github.com/rupansh/reusable-fmt }
 ```
 
 `src.rs`:
-```
+```rust
 use reusable_fmt::*;
 ```
 
 ## Example Usage
-```
+```rust
 use reusable_fmt:*;
 
 // This defines your format strings
