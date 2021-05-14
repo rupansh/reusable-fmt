@@ -14,3 +14,7 @@ categories = ["development-tools", "parsing", ]
 
 [build-dependencies]
 rustc_version = "0.3"
+
+[features]
+default = ["std"]
+std = []
